@@ -1,4 +1,4 @@
-vs code config 
+vs code config
 
 ### 方便开发的插件：
 
@@ -17,23 +17,53 @@ vs code config
         "command": "-workbench.action.showAllSymbols"
     },
     {
-        "key": "ctrl+t", // 将光标前后两个字符互换
+        "key": "ctrl+t",
         "command": "editor.action.transpose"
+    },
+    {
+        "key": "alt+p",
+        "command": "workbench.action.openWorkspace"
+    },
+    {
+        "key": "ctrl+shift+alt+k",
+        "command": "workbench.action.editor.nextChange", // next change with git
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+f5",
+        "command": "-workbench.action.editor.nextChange",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+alt+j",
+        "command": "workbench.action.editor.previousChange",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+f5",
+        "command": "-workbench.action.editor.previousChange",
+        "when": "editorTextFocus"
     }
 ]
+
 ```
 
 ### UserSetting.go
 
 ```js
 {
-    // 使用 sublime 的快捷键
-    "sublimeTextKeymap.promptV3Features": true, 
+    // 基本配置
     // 更改多光标的方式为 alt+click， 这样可以让 Ctrl+Click 为 Go To Defination
-    "editor.multiCursorModifier": "alt", 
+    "editor.multiCursorModifier": "alt",
     "editor.snippetSuggestions": "top",
     "editor.formatOnPaste": true,
-    "go.lintTool": "gometalinter" // 用 gometalinter 没有多余的波浪线
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true
+    // 使用 sublime 的快捷键
+    "sublimeTextKeymap.promptV3Features": true,
+    "go.lintTool": "gometalinter"
+    "go.lintFlags": ["-min_confidence=.8"]
 }
 ```
 

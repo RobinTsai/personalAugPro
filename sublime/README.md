@@ -12,6 +12,11 @@ Follow file "this.sublime-project", then use command "subl this.sublime-project"
 
 ## Add Menus
 
-[Docs .sublime-menu](http://docs.sublimetext.info/en/latest/customization/menus.html#menu-items) 
+[Docs .sublime-menu](http://docs.sublimetext.info/en/latest/customization/menus.html#menu-items)
 
 Such as file *Context.sublime-menu* , you can add your customized context right-mouse-clickd menu.
+
+## Extension
+
+- Ctags: This can navigation to the position of defination or jump back.
+    - run command `sudo apt-get install ctags`, and then check key bindings search `jump_back`

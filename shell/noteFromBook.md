@@ -75,7 +75,7 @@ Book Name: Linux命令行与shell脚本编程大全(第3版)
         * 2, `~/.bash_login`
         * 3, `~/.profile`(上面三个有顺序，且只会执行一个)
         * `~/.bashrc` (这个文件可储存 **个人用户永久性变量**)
-    + `/etc/profile`，每个帐户登陆时会执行它，可顺此看代码。它主要迭代了所有 `/etc/profile.d/`下的 `.sh`文件
+    + `/etc/profile`，每个帐户登陆时会执行它，可顺此看代码。它主要迭代了所有 `/etc/profile.d/`下的 `.sh`文件 (Setting>Session and Startup 也可设置自启动项)
     +  `$HOME/`下的文件一般只用到其中一到两个，这些文件定义了一些环境变量，并在每次启动bash shell时生效
 
 - 2. 交互式shell
